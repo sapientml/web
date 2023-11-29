@@ -1,0 +1,672 @@
+/* added 2023年7月19日 追加のCSSを記述 */
+
+@font-face {
+    font-family: 'lineBd';
+    src:url('/fonts/LINESeedJP_OTF_Bd.woff2') format('woff2'),
+        url('/fonts/LINESeedJP_OTF_Bd.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'lineRg';
+    src:url('/fonts/LINESeedJP_OTF_Rg.woff2') format('woff2'),
+        url('/fonts/LINESeedJP_OTF_Rg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    font-family: lineRg, sans-serif !important;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    display: block;
+    min-width: 1240px;
+    color:#232340;
+}
+
+.page-heading{
+    display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: lineBd, sans-serif !important;
+}
+
+* a{
+    color: #4D43E4;
+}
+
+.header-section::before {
+    content: "";
+    width: 100%;
+    height: 200px;
+    display: block;
+    background: linear-gradient(180deg, #0F0E25 0%, rgba(4, 4, 4, 0) 100%);
+}
+
+/* メインイメージヘッダ部分 */
+#h1BoxRap {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#h1Box {
+    width:923px;
+    margin:0 auto;
+    position: relative;
+}
+    #h1Box h1{
+        font-size:40px;
+        padding:100px 0 0 0;
+    }
+    #h1Box h1 span{
+        display: block;
+        color:#1DD7FA;
+    }
+    body.en #h1Box h1{
+        font-size: 32px;
+        padding: 100px 0 0 0;
+        width:450px;
+    }
+#h1Box p.lead{
+    width: 428px;
+    margin: 20px 0 30px;
+    color:#fff;
+    font-size: 16px;
+}
+#h1Box ul {
+    margin:0;
+    padding: 0;
+    display: flex;
+}
+#h1Box ul li{
+    margin: 0;
+    padding: 0 10px 0 0;
+    display: inline-flex;
+}
+#h1Box ul li a{
+    display: block;
+    font-size:20px;
+    font-family: lineBd, sans-serif !important;
+    padding:8px 0 7px 0;
+    width:190px;
+    border-radius: 5px;
+    text-align: center;
+}
+#h1Box ul li.tryit a {
+    border:solid 2px #1DD7FA;
+    background-color: #1DD7FA;
+    color: #fff;
+}
+#h1Box ul li.info a {
+    border:solid 2px #fff;
+    color: #fff;
+}
+#h1Box ul li a:hover {
+    text-decoration: none;
+}
+
+#h1Box ul li.tryit a:hover {
+    background-color: #03B5F5;
+    border-color: #03B5F5;
+}
+
+#h1Box ul li.info a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.flex-box {
+    display: flex;
+    justify-content: space-between;
+}
+.flex-box .fbox {
+    /* width: 50%; */
+    display: flex;
+    align-items: center;
+}
+
+
+#h1Box .h1BoxRap-box{
+    position: absolute;
+    padding: 32px 36px;
+    width: 441px;
+    height: 340px;
+    top: 108px;
+    left: 640px;
+    background: linear-gradient(180deg, rgba(29, 215, 250, 0.8) 0%, rgba(151, 71, 255, 0.8) 100%);
+}
+
+.h1BoxRap-box-title {
+    font-family: 'Barlow', sans-serif !important;
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #F3F4F9;
+}
+#h1Box .h1BoxRap-box .flex-box {
+    margin-top: 112px;
+}
+.h1BoxRap-box-text {
+    font-family: Lexend Deca  !important;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #F3F4F9;
+}
+
+body.en #h1Box .h1BoxRap-box {
+    /* right: -120px; */
+}
+/* メインイメージヘッダ部分　ここまで */
+
+
+/* 二階層以降の簡易ヘッダ */
+body:not(.home) header{
+    display: none;
+}
+body:not(.home) nav {
+    background-color: #623CE3 !important;
+    opacity: 0.93;
+}
+body:not(.home)z nav.navbar-default {
+    background-color: #623CE3 !important;
+    opacity: 0.93;
+}
+
+body:not(.home) h2.pagetop {
+    margin-top:60px;
+}
+
+
+/* ナビゲーション部分 */
+nav.navbar-default{
+    position: fixed;/* 画面上部固定 */
+    top:0;
+    left:0;
+    background-color: rgba(0, 0, 0,0) !important;
+    border: none;
+}
+
+nav .navbar-brand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left:0 !important;
+}
+
+nav.navbar-default.top-nav-short{
+    background-color: #623CE3 !important;
+    opacity: 0.93;
+}
+    .navbar-brand {
+        text-indent: -9999px;
+        background: url(/img/sapient_ml_logo.svg) no-repeat 20px 50%;
+        width: 240px;
+        padding: 24px 0;
+        margin: 0;
+        height: auto;
+    }
+
+    @media only screen and (min-width : 767px) {
+    nav.navbar-custom .nav{
+        display: flex;
+        height:68px;
+        justify-content: flex-end;
+        align-items: center;
+
+    }
+    nav.navbar-custom .nav li {
+        margin-right:10px;
+    }
+
+        nav.navbar-custom .nav li a {
+            color: #fff;
+            font-size: 16px;
+            padding: 5px 5px;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+        nav.navbar-custom .nav li a:hover {
+            color: #fff;
+            opacity: 0.9;
+            text-decoration: underline;
+        }
+
+        nav.navbar-custom .nav li .menu-try-it {
+            background-color: #1DD7FA;
+            border: solid 2px #1DD7FA;
+            padding: 8px 24px;
+            color: #FFF;
+            margin-right:10px;
+            margin-left:10px;
+            min-width: 140px;
+            text-align: center;
+        }
+
+        nav.navbar-custom .nav li .menu-contact {
+            border: solid 2px #FFF;
+            padding: 8px 24px;
+            color: #FFF;
+            margin-right:10px;
+            min-width: 140px;
+            text-align: center;
+        }
+
+        nav.navbar-custom .nav li a.menu-lang {
+            text-decoration: underline;
+        }
+
+        nav.navbar-custom .nav li a.menu-try-it:hover,
+        nav.navbar-custom .nav li a.menu-contact:hover {
+            text-decoration: none;
+        }
+
+        nav.navbar-custom .nav li .menu-try-it:hover {
+            background-color: #03B5F5;
+            border-color: #03B5F5;
+        }
+
+        nav.navbar-custom .nav li .menu-contact:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+
+    }
+
+
+
+
+@media only screen and (max-width : 1100px) {
+    /* 横幅1100pxまでの時 */
+    nav.navbar-custom .nav li a {
+        font-size: 14px;
+        padding-left:10px;
+        padding-right:10px;
+    }
+}
+@media only screen and (max-width : 900px) {
+    /* 横幅900pxまでの時 */
+    nav.navbar-custom .nav li a {
+        font-size: 12px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 15px;
+    }
+}
+@media only screen and (max-width : 767px) {
+    /* 横幅767px = モバイル までの時 */
+
+    nav.navbar-custom .nav li a {
+        font-size: 16px;
+        color:#fff;
+    }
+}
+
+
+header{
+    display: block;
+    height:396px;
+    width:100%;
+    background: url(/img/body-bg.png) no-repeat;
+    background-size:cover;
+    background-position: 0 0;
+    border-radius: 0 0 0 0;
+    margin-bottom: 80px;
+}
+/* ナビゲーション部分　ここまで */
+
+
+
+
+/*　Main　*/
+.container[role=main] {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    width:923px;
+}
+
+.container[role=main]>.row>div {
+    background: none;
+    border: none;
+    padding:0;
+    width:100%;
+    margin:0;
+}
+
+.container[role=main] .well{
+    /* .wellは外部からさまざまな指定を受けているので、リセットして使わない方針 */
+    background: none;
+    border: none;
+    box-shadow:none;
+    padding:0;
+}
+
+.container[role=main]>.row>div h2{
+    background: url(/img/h2-icon.svg) no-repeat 0 6px;
+    padding : 0 0 8px 44px;
+    color: #1D5098;
+    font-size:40px;
+}
+.container[role=main]>.row>div h2.lined {
+    border-bottom: solid thin #1D5098;
+}
+.container[role=main]>.row>div h2.lined:nth-of-type(n + 2) {
+    margin-top: 100px;
+}
+.container[role=main]>.row>div h3 {
+    padding: 0 0 8px 0;
+    color: #FFBA79;
+    line-height:1.4em;
+    font-size: 32px;
+    margin-top:40px;
+}
+.container[role=main]>.row>div h3.lined {
+    padding: 0 0 8px 0;
+    color: #232340;
+    font-size: 32px;border-bottom: solid thin #232340;
+}
+.container[role=main]>.row>div h4 {
+    font-size: 28px;
+    line-height: 45px;
+}
+.container[role=main]>.row>div h5 {
+    font-size: 24px;
+    line-height: 45px;
+}
+
+.container[role=main]>.row>div p{
+    font-size:16px;
+    line-height:1.8em;
+
+}
+
+h1 {
+    color: aliceblue;
+}
+
+.container[role=main] hr.small {
+    color: aliceblue;
+}
+
+.container[role=main] h2 {
+    scroll-margin-top: 70px;
+}
+
+.container[role=main] p {
+    font-weight: normal;
+}
+
+
+.container[role=main] strong {
+    font-family: lineBd, sans-serif !important;
+}
+
+.container[role=main] em {
+    background-color: rgba(29,215,250,0.2);
+    font-style: normal;
+}
+
+.container[role=main] del {
+    text-decoration: line-through;
+}
+
+.container[role=main] ul li,
+.container[role=main] ol li {
+    font-size: 16px;
+    line-height:2em;
+    padding-left:5px;
+}
+
+.container[role=main] ul li {
+    list-style-image: url("/img/ul-list-image.png");
+}
+
+.container[role=main] ul li li{
+    margin-left:-25px;
+}
+
+.container[role=main] ol {
+    counter-reset: li;
+    /* li のカウンタを 0 にセット */
+    list-style: none;
+}
+
+.container[role=main] ol li:before {
+    color: #8343E4;
+    font-family: lineBd, sans-serif !important;
+    counter-increment: li;
+    /* li の数を一つずつ増加 */
+    content: counter(li) ". ";
+    /* 数を表示 */
+    margin-left:-20px;
+    font-size:18px;
+}
+.container[role=main] ol li li {
+    margin-left: -20px;
+}
+
+
+.container[role=main] table {
+    width:100%;
+}
+.container[role=main] table th {
+    font-size:16px;
+    background-color: #ABC8FF;
+    border: solid thin #908DD1;
+}
+.container[role=main] table td {
+    font-size: 16px;
+    background-color: #fff;
+    border: solid thin #908DD1;
+}
+
+
+
+
+/* トップページの上段部分だけ、特殊な組み方をする。main-description */
+section.main-description{
+    display: flex;
+}
+section.main-description section:first-child{
+    margin-right:20px;
+}
+section.main-description section div.note{
+    border-left:solid thin #558EFB;
+    padding:0 0 0 20px;
+    margin-top:20px;
+}
+
+section.main-description section div.note p{
+    font-size:14px !important;
+    margin:0;
+    padding:0;
+}
+/* Main ここまで */
+
+/* Footer */
+footer{
+    padding:0 !important;
+}
+
+footer .container{
+    padding: 0 !important;
+    width:100%;
+    max-width: 923px;
+}
+
+footer p#socialIcon{
+    display: flex;
+    justify-content: center;
+}
+
+footer p#socialIcon a.github{
+    display: block;
+    text-indent: -99999px;
+    width:32px;
+    height:32px;
+    background: url(/img/github-mark.svg) no-repeat ;
+    background-size: cover;
+}
+    footer p#socialIcon a:hover{
+        opacity: 0.7;
+    }
+
+@media only screen and (max-width : 767px) {
+    /* 横幅767px = モバイル までの時 */
+    footer .container {
+        padding: 0 !important;
+        margin:0 !important;
+    }
+}
+
+footer ul{
+    display: flex;
+    width:100%;
+    margin:0;
+    padding:40px 0 0;
+    justify-content: center;
+}
+footer ul li{
+    display: block;
+    margin: 0 20px 0 0;
+}
+footer ul li a{
+    color:#4D43E4;
+    text-decoration: underline;
+}
+
+footer p{
+    text-align: center;
+    padding:0;
+    margin: 20px 0;
+}
+
+
+/* Footer ここまで */
+
+/* Button Style */
+
+p.button{
+    display: flex;
+}
+
+p.button a {
+    /* ボタンの本設定 */
+    border-radius: 5px;
+    display: block;
+    box-sizing: border-box;
+    text-decoration: none;
+ }
+
+ /* ブルー（デフォルト） */
+.button.type1 a{
+    background-color: #1DD7FA;
+    color: white !important;
+    border: solid 2px #1DD7FA;
+}
+
+/* 白抜き */
+.button.type2 a {
+    background-color: none;
+    color: white !important;
+    border: solid 2px #fff;
+}
+
+/* パープル */
+.button.type3 a {
+    background-color: #5941E3;
+    color: white !important;
+    border: solid 2px #5941E3;
+}
+
+/* ブルーとパープルの交互。odd=奇数、even偶数 */
+.button.type4 a:nth-child(odd) {
+    background-color: #5941E3;
+    color: white !important;
+    border: solid 2px #5941E3;
+}
+.button.type4 a:nth-child(even) {
+    background-color: #1DD7FA;
+    color: white !important;
+    border: solid 2px #1DD7FA;
+}
+
+.button.small a {
+    padding: 3px 20px 0;
+    font-size: 16px;
+    margin-right: 10px;
+    height: 36px;
+}
+
+.button.mid a {
+    padding: 6px 40px 0;
+    font-size: 16px;
+    margin-right: 10px;
+    height: 42px;
+}
+.button.mid.right a {
+    margin-right: 0;
+}
+
+.button.large a {
+    padding: 10px 40px 0;
+    font-size: 20px;
+    margin-right: 20px;
+    height: 54px;
+}
+
+
+.button.type1 a:hover{
+    background-color: #03B5F5;
+    border-color: #03B5F5;
+}
+.button.type2 a:hover {
+    background-color: rgba(0,0,0,0.2);
+}
+.button.type3 a:hover {
+    background-color: white;
+    color: #5941E3 !important;
+    border: solid 2px #5941E3;
+}
+.button.type4 a:nth-child(odd):hover{
+    background-color: white;
+    color: #5941E3 !important;
+    border: solid 2px #5941E3;
+}
+.button.type4 a:nth-child(even):hover {
+    background-color: white;
+    color: #03B5F5 !important;
+    border-color: #03B5F5;
+}
+
+.button.center {
+    text-align: center;
+    justify-content: center;
+}
+
+hr{
+    border:solid thin #d8e6ff;
+    margin:80px 0;
+}
+
+
