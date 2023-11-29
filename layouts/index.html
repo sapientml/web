@@ -1,0 +1,58 @@
+{{ define "main" }}
+<div id="h1BoxRap">
+  <div id="h1Box">
+    {{ if eq .Site.Language.Lang "en" }}
+    <div class="h1BoxRap-box">
+      <h2 class="h1BoxRap-box-title">Highly Accurate<br />AI models</h2>
+      <div class="flex-box">
+        <div class="fbox"><p class="h1BoxRap-box-text">Boost your AI model<br />creation more quickly<br />and accurately</p></div>
+        <div class="fbox"><p class="button type2 mid right"><a href="https://sapientml.readthedocs.io/en/latest/user/installation.html#">Get Started</a></p></div>
+      </div>
+    </div>
+    {{ end }}
+    {{ if eq .Site.Language.Lang "ja" }}
+    <div class="h1BoxRap-box">
+      <h2 class="h1BoxRap-box-title">Highly Accurate<br />AI models</h2>
+      <div class="flex-box">
+        <div class="fbox"><p class="h1BoxRap-box-text">高精度なAIモデルの<br />自動構築を加速</p></div>
+        <div class="fbox"><p class="button type2 mid center"><a href="https://sapientml.readthedocs.io/en/latest/user/installation.html#" >試してみる</a></p></div>
+      </div>
+    </div>
+    {{ end }}
+  </div><!-- h1Box -->
+</div><!-- h1BoxRap -->
+
+<div role="main" class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      {{ with .Content }}
+      <div class="well">
+        {{.}}
+      </div>
+      {{ end }}
+
+      <div class="posts-list">
+        {{ $pag := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+        {{ range $pag.Pages }}
+        {{ partial "post_preview" . }}
+        {{ end }}
+      </div>
+
+      {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+      <ul class="pager main-pager">
+        {{ if .Paginator.HasPrev }}
+        <li class="previous">
+          <a href="{{ .Permalink }}page/{{ .Paginator.Prev.PageNumber }}/">&larr; {{ i18n "newerPosts" }}</a>
+        </li>
+        {{ end }}
+        {{ if .Paginator.HasNext }}
+        <li class="next">
+          <a href="{{ .Permalink }}page/{{ .Paginator.Next.PageNumber }}/">{{ i18n "olderPosts" }} &rarr;</a>
+        </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

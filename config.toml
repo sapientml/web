@@ -1,0 +1,88 @@
+baseURL = '/'
+languageCode = 'en-us'
+
+theme = "beautifulhugo"
+
+[Params]
+#  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
+mainSections = ["post", "posts"]
+favicon = "img/favicon.ico"
+dateFormat = "August 31, 2023"
+commit = false
+rss = false
+comments = false
+readingTime = false
+wordCount = false
+useHLJS = false
+socialShare = true
+delayDisqus = true
+showRelatedPosts = true
+pygmentsUseClasses = true
+
+[markup.goldmark.parser.attribute]
+block = true
+
+# 言語設定
+[languages]
+[languages.en]
+contentDir = "content/en" # English
+languageName = "English"
+languageCode = "en"
+title = 'SapientML'
+[languages.en.menu]
+[languages.ja]
+contentDir = "content/ja" # Japanese
+languageName = "日本語"
+languageCode = "ja"
+title = 'SapientML'
+[languages.ja.menu]
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
+[Author]
+# Set only your "username" for default hosts and full URLs otherwise (e.g., "https://MyGitLab.org/username")
+name = "The SapientML Authors"
+website = "https://sapientml.io/"
+
+[[languages.en.menu.main]]
+name = "Overview"
+url = "#h2-1"
+weight = 1
+
+[[languages.en.menu.main]]
+name = "Features"
+url = "#h2-2"
+weight = 2
+
+[[languages.en.menu.main]]
+url = "https://sapientml.readthedocs.io/en/"
+name = "Documentation"
+weight = 3
+
+[[languages.en.menu.main]]
+url = "https://github.com/sapientml/sapientml"
+name = "GitHub"
+weight = 4
+
+[[languages.ja.menu.main]]
+name = "概要"
+url = "#h2-1"
+weight = 1
+
+[[languages.ja.menu.main]]
+name = "特徴"
+url = "#h2-2"
+weight = 2
+
+[[languages.ja.menu.main]]
+url = "https://sapientml.readthedocs.io/en/"
+name = "ドキュメント"
+weight = 3
+
+[[languages.ja.menu.main]]
+url = "https://github.com/sapientml/sapientml"
+name = "GitHub"
+weight = 4
